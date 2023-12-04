@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import Header from "../common/Header";
 
 const CreateUser = () => {
   const {
@@ -24,11 +25,7 @@ const CreateUser = () => {
 
   return (
     <>
-      <div className="bg-dark shadow">
-        <div className="container">
-          <h1 className="text-white py-3">REACT CRUD</h1>
-        </div>
-      </div>
+      <Header />
       <div className="container">
         <div className="card border-0 shadow p-3 my-5">
           <form onSubmit={handleSubmit(formSubmit)}>
