@@ -10,9 +10,21 @@ const ListUser = () => {
     const data = await res.json();
     setUsers(data);
   };
+  const deleteUser = async (id) => {
+    if (window.confirm("Are you sure you want to delete")) {
+      await fetch("http://localhost:4000/users/" + id, {
+        method: "DELETE",
+      });
+    }
+
+    const newUsers = users.filter((user) => user.id != id);
+    setUsers(newUsers);
+  };
+
   useEffect(() => {
     fetchUsers();
   }, []);
+
   return (
     <>
       <Header />
@@ -53,7 +65,10 @@ const ListUser = () => {
                       >
                         Edit
                       </Link>
-                      <Link href="#" className="btn btn-danger ms-1">
+                      <Link
+                        onClick={() => deleteUser(user.id)}
+                        className="btn btn-danger ms-1"
+                      >
                         Delete
                       </Link>
                     </td>

@@ -1,42 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "amar(updated)",
-      "email": "amar@gmail.com",
-      "mobile": "45678912300"
-    },
-    {
-      "name": "mohit",
-      "email": "mohit@gmail.com",
-      "mobile": "789456123",
-      "id": 2
-    },
-    {
-      "name": "mohit singh",
-      "email": "mohitsingh@gmail.com",
-      "mobile": "789456123",
-      "id": 3
-    },
-    {
-      "name": "mohit singh",
-      "email": "mohitsingh@gmail.com",
-      "mobile": "789456123",
-      "id": 4
-    },
-    {
-      "name": "mohit singh",
-      "email": "mohitsingh@gmail.com",
-      "mobile": "789456123",
-      "id": 5
-    },
-    {
-      "name": "mohit singh",
-      "email": "mohitsingh@gmail.com",
-      "mobile": "789456123",
-      "id": 6
-    },
-    {
       "name": "kumar",
       "email": "kumar@gmail.com",
       "mobile": "4789646",
