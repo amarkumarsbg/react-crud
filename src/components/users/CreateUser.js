@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Header from "../common/Header";
+import { toast } from "react-toastify";
 
 const CreateUser = () => {
   const {
@@ -20,6 +21,8 @@ const CreateUser = () => {
       },
       body: JSON.stringify(data),
     });
+
+    toast("User added successfully");
     navigate("/users");
   };
 

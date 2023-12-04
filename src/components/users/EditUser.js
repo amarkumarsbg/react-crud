@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Header from "../common/Header";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const EditUser = () => {
   const {
@@ -22,6 +23,8 @@ const EditUser = () => {
       },
       body: JSON.stringify(data),
     });
+
+    toast("User updated successfully");
     navigate("/users");
   };
 

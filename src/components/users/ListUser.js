@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../common/Header";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ListUser = () => {
   const [users, setUsers] = useState([]);
@@ -19,6 +20,8 @@ const ListUser = () => {
 
     const newUsers = users.filter((user) => user.id != id);
     setUsers(newUsers);
+
+    toast("User deleted successfully");
   };
 
   useEffect(() => {
@@ -53,7 +56,7 @@ const ListUser = () => {
             <tbody>
               {users.map((user) => {
                 return (
-                  <tr>
+                  <tr key={user.id}>
                     <td>{user.id}</td>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
